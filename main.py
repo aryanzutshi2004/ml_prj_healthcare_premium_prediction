@@ -75,4 +75,6 @@ if df_to_predict["age"][0] >26:
     premium_amount = model_rest.predict(df_to_predict)
 elif df_to_predict["age"][0]<=26:
     premium_amount = model_young.predict(df_to_predict)
-st.success(f"The Premium Amount is ₹{math.floor(premium_amount[0])}")
+
+if st.button("Predict"):
+    st.success(f"The Premium Amount is ₹{math.floor(premium_amount[0])}")
